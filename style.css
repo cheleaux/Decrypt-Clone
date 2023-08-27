@@ -14,7 +14,6 @@
     --fs-120: .75rem;
     --fs-140: .875rem;
     --fs-160: 1rem;
-
 }
 
 
@@ -34,6 +33,7 @@ body {
   min-height: 100vh;
   font-family: var(--ff-main);
   color: var(--clr-text-main);
+  overflow-x: hidden;
 }
 
 * {
@@ -90,7 +90,7 @@ strong {
 
 .body-header {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 hr {
@@ -224,11 +224,24 @@ hr {
     color: var(--clr-text-accent);
 }
 
+/* ------ Carousel ------ */
+
 .crypto-carousel-container {
-    width: 100%;
-    height: 50px;
+    max-width: 1903px;
+    height: 47px;
     position: relative;
+    overflow: hidden;
     align-items: center;
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        transform: rotate(180deg);
+    }
 }
 
 .crypto-carousel-container > hr {
@@ -236,38 +249,41 @@ hr {
     bottom: 0;
 }
 
-.crypto-carousel {
-    gap: 20px;
-    height: max-content;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
-    width: 100%;
-}
-
-.crypto-carousel::before,
-.crypto-carousel::after {
-    background: linear-gradient(to right,  rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0) 100%);
+.crypto-carousel-container::before,
+.crypto-carousel-container::after {
     content: "";
-    height: 100px;
+    height: 100%;
+    width: 70px;
+    background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
     position: absolute;
-    width: 200px;
-    z-index: 2;
 }
 
-.crypto-carousel::before {
-    left: 0;
-    top: 0;
+.crypto-carousel {
+    width: calc(250px * 20);
+    height: max-content;
+    animation: scroll 30s linear infinite;
 }
 
-.crypto-carousel::before {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 10))
+    }
 }
 
-.crypto-carousel > span {
+.slide {
+    width: 250px;
+    height: 100%;
+}
+
+.slide > span {
     font-size: var(--fs-140);
-    width: max-content;
-    gap: 5px;
+    text-align: center;
+    gap: 7px;
+    justify-content: center
 }
+
+
+/* ------ Ad Banner ------ */

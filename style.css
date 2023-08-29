@@ -32,7 +32,7 @@
     --fs-220: 1.375rem;
     --fs-240: 1.5rem;
 
-    --transtion-header: ease-in-out .5s
+    --transtion-header: ease-in-out 1s
 }
 
 
@@ -162,7 +162,16 @@ strong {
     width: 100%;
     margin-bottom: 2px;
     background-color: var(--clr-text-light);
+    opacity: 98%;
     z-index: 999;
+    height: max-content;
+    transform: var(--transtion-header);
+}
+
+.header-main {
+    justify-content: space-between;
+    align-items: center;
+    height: 94px;
 }
 
 hr {
@@ -174,12 +183,14 @@ hr {
 }
 
 .header-wrapper {
-    width: 1440px;
-    padding: 0 60px;
+    max-width: 1440px;
+    padding: 15px 60px 10px;
     margin: auto;
-    justify-content: space-between;
-    align-items: center;
-    
+}
+
+.header-wrapper > div {
+    width: 100%;
+    position: relative;
 }
 
 .header-left, .herder-center, .header-right {
@@ -203,10 +214,13 @@ hr {
 
 .header-center {
     margin-right: -135px;
+    height: max-content;
+    transform: translateY(50px);
 }
 .header-right {
     gap: 20px;
     align-items: center;
+    height: max-content;
 }
 
 .header-right > button, .lang-select > select {
@@ -262,23 +276,25 @@ hr {
 
 .logo {
     width: max-content;
-    padding: 20px 0 10px 0;
-    flex-direction: row;
-    margin: auto;
-    z-index: 100;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo > a {
     align-items: center;
+    justify-content: space-between;
+    max-width: 219px;
 }
 
 .logo > a :first-child {
-    margin-right: 15px;
+    max-width: 29%;
 }
 
 .logo > a :last-child {
-    width: auto;
-    max-height: 35px;
+    width: 100%;
+    max-width: 64%;
+    height: auto;
 }
 
 .header-center > nav {
@@ -300,24 +316,12 @@ hr {
 
  /* Sticky Styles */
 
-.sticky * {
-    transition: var(--transtion-header);
-}
-
-.sticky img {
-    height: 0;
-}
-
 .sticky + .crypto-carousel-container {
-    margin-top: 76px;
+    margin-top: 130px;
 }
 
-.sticky nav {
-    align-self: center;
-}
-
-.sticky .header-wrapper {
-    padding-bottom: 20px;
+.sticky .logo > a {
+    width: ;
 }
 
 /* ------ Carousel ------ */

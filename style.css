@@ -53,6 +53,7 @@ body {
   font-family: var(--ff-primary);
   color: var(--clr-text-main);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -278,7 +279,9 @@ hr {
     width: max-content;
     position: absolute;
     left: 50%;
+    top: -60%;
     transform: translateX(-50%);
+    transition: ease-out .5s;
 }
 
 .logo > a {

@@ -156,11 +156,13 @@ strong {
     margin-right: 7px;
     font-size: var(--fs-220);
     float: left;
+    margin-top: -4px;
+    margin: -4px 9px 0 1px;
 }
 
 .bulletin > h5 {
     overflow-y: hidden;
-    height: 16px;
+    height: 14px;
 }
 
 .bulletin > a > p {
@@ -334,42 +336,19 @@ hr {
     margin-top: 130px;
 }
 
-.sticky .logo > a {
-    width: ;
-}
-
 /* ------ Carousel ------ */
 
 .crypto-carousel-container {
     max-width: 1903px;
     height: 47px;
-    position: relative;
     overflow: hidden;
     align-items: center;
-
-    &::before {
-        left: 0;
-    }
-
-    &::after {
-        bottom: 0;
-        right: 0;
-        transform: rotate(180deg);
-    }
+    margin: 0 auto;
 }
 
 .crypto-carousel-container > hr {
     position: absolute;
     bottom: 0;
-}
-
-.crypto-carousel-container::before,
-.crypto-carousel-container::after {
-    content: "";
-    height: 100%;
-    width: 70px;
-    background: var(--clr-gradient-fade);
-    position: absolute;
 }
 
 .crypto-carousel {
@@ -475,7 +454,7 @@ h4 {
 }
 
 .news-explorer-column, .hubs-column {
-    width: 315px;
+    max-width: 315px;
 }
 
 .news-explorer-column, .feat-news {
@@ -483,11 +462,10 @@ h4 {
     height: 100%;
 }
 
-:is(.news-explorer-column, .feat-news, .hubs-column) > footer {
+.news-explorer-column > footer{
     position: absolute;
     bottom: 0;
     width: 100%;
-    max-width: 600px
 }
 
 /* News Explorer */
@@ -495,13 +473,14 @@ h4 {
 .news-explorer-feed {
     margin-top: 20px;
     height: 700px;
-    overflow:auto;
+    overflow: auto;
 }
 
 .nwsx-headline-list {
     flex-direction: column;
     gap: 15px;
     padding: 0 6px;
+    transform: translateX(-2%);
 }
 
 .nwsx-item > h5 {
@@ -518,7 +497,7 @@ h4 {
     margin-top: 2px;
     padding: 3px 0 3px 12px;
     margin-left: 4px;
-    width: 250px;
+    max-width: 202.75px;
 }
 
  /* Feteaured News */
@@ -561,6 +540,14 @@ h4 {
 .feat-item {
     width: 50%;
     display: inline-block;
+}
+
+.feat-item:first-of-type {
+    padding-right: 7px;
+}
+
+.feat-item:last-of-type {
+    padding-left: 7px;
 }
 
 .feat-item > a {
@@ -669,7 +656,8 @@ h4 {
 
 .hub-midsection > svg {
     height: 20px;
-    width: 20px;
+    min-width: 20px;
+    max-width: 21px;
     margin-left: 10px;
     margin-top: 1px;
 }

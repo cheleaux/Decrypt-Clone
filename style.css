@@ -162,7 +162,7 @@ strong {
 
 .bulletin > h5 {
     overflow-y: hidden;
-    height: 14px;
+    height: 15px;
 }
 
 .bulletin > a > p {
@@ -339,9 +339,11 @@ hr {
 /* ------ Carousel ------ */
 
 .crypto-carousel-container {
+    width: 100%;
     max-width: 1903px;
     height: 47px;
     overflow: hidden;
+    position: relative;
     align-items: center;
     margin: 0 auto;
 }
@@ -403,7 +405,7 @@ article {
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-    height: max-content;
+    height: 882px;
     margin-bottom: 100px;
 }
 
@@ -432,10 +434,11 @@ h4 {
 
 .news-explorer-column, .hubs-column {
     grid-column: span 3;
+    max-width: 315px;
 }
 
 .news-explorer-header, .hubs-column-header {
-    height: 40px;
+    height: max-content;
 }
 
 .news-explorer-header > h3,
@@ -453,25 +456,24 @@ h4 {
     display: block;
 }
 
-.news-explorer-column, .hubs-column {
-    max-width: 315px;
-}
-
-.news-explorer-column, .feat-news {
-    position: relative;
+.news-explorer-column, .feat-news, .hubs-column {
     height: 100%;
+    flex-direction: column;
+    gap: 0;
 }
 
-.news-explorer-column > footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+:is(.news-explorer-column, .feat-news, .hubs-column) > footer {
+    margin-top: auto;
+}
+
+:is(.news-explorer-column, .feat-news) > footer {
+    height: 30px;
 }
 
 /* News Explorer */
 
 .news-explorer-feed {
-    margin-top: 20px;
+    margin-top: -25px;
     height: 700px;
     overflow: auto;
 }
@@ -497,7 +499,7 @@ h4 {
     margin-top: 2px;
     padding: 3px 0 3px 12px;
     margin-left: 4px;
-    max-width: 202.75px;
+    max-width: 95%;
 }
 
  /* Feteaured News */
@@ -507,6 +509,10 @@ h4 {
     max-width: 650px;
     grid-column: span 6;
     padding: 0 25px;
+}
+
+.feat-news > hr{
+    margin: 10px 0;
 }
 
 .main-feat-poster {
@@ -569,8 +575,6 @@ h4 {
 .feat-list {
     flex-direction: column;
     gap: 10px;
-    margin: 15px 0;
-
 }
 
 .feat-list-items > a > *,
@@ -592,8 +596,8 @@ h4 {
 
  /* Hubs Column */
 
-.hubs-column {
-    height: max-content;
+.hubs-column > footer > hr {
+    margin-top: 29px
 }
 
 .hubs-cards-list {
@@ -697,4 +701,15 @@ h4 {
 .stat-badges :last-child,
 .stat-claimed :last-child {
     color: var(--clr-text-main);
+}
+
+
+ /* v-v-v Width: 1180px v-v-v */
+
+@media (max-width: 1180px) {
+
+    body {
+        background-color: green;
+    }
+
 }

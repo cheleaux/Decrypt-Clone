@@ -8,11 +8,11 @@
     <title>Your guide to Bitcoin, Ethereum & Web 3.0 - Decrypt</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<body>
-    <header id="header-area" class="body-header ease">
+<body onload="formatHeaderOnLoad()">
+    <header id="header-area" class="body-header ease sticky">
         <div class="header-wrapper">
             <div class="flex">
-                <div id="logo-container" class="logo ease"><a id="logo" href="#" class="flex ease"><img class="ease" src="Assets/decrypt-mark.webp" alt="logo"><img class="ease" src="Assets/decrypt-word.webp" alt="LOGO TEXT"></a></div>
+                <div id="logo-container" class="logo ease"><a id="logo" href="#" class="logo-props flex ease"><img class="ease" src="Assets/decrypt-mark.webp" alt="logo"><img class="ease" src="Assets/decrypt-word.webp" alt="LOGO TEXT"></a></div>
                 <div id="header-utility" class="header-main flex ease">
                     <div class="header-left flex">
                         <i class="bi bi-search"></i>
@@ -29,6 +29,7 @@
                             <a href="#" class="nav-item">VIDEOS</a>
                             <a href="#" class="nav-item">NEWSLETTERS</a>
                         </nav>
+                        <a href="#" class="logo-props flex logo-sub-1180"><img src="Assets/decrypt-mark.webp" alt="logo"><img class="ease" src="Assets/decrypt-word.webp" alt="LOGO TEXT"></a>
                     </div>
                     <div class="header-right flex">
                         <div class="lang-select">
@@ -38,6 +39,7 @@
                             </select>
                         </div>
                         <button><i class="bi bi-person-fill"></i> Sign Up</button>
+                        <button><i class="bi bi-person-fill"></i></button>
                     </div>
                 </div>
             </div>

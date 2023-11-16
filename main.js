@@ -65,16 +65,14 @@ function moveLogo( lengthScrolled, lengthUnscrolled ) {
     toggleLogoVisibility()
 };
 
-// function toggleLogoVisibility(){
-//     const logoTranslate = logoContainer.style.transform;
-//     const headerTranslate = header.style.transform;
+function toggleLogoVisibility(){
+    const logoTranslate = logoContainer.style.transform;
+    const headerTranslate = header.style.transform;
 
-//     logoContainer.style.visibility = 
-//     Number(headerTranslate.substring(10, headerTranslate.length - 3)) <= -40 ? "hidden" : "visible";
-//         // Number(logoTranslate.substring(16, logoTranslate.length - 2)) >= 75 ? "hidden" : "visible";
-    
-    
-// }
+    logoContainer.style.visibility = 
+    Number(headerTranslate.substring(10, headerTranslate.length - 3)) <= -40 ? "hidden" : "visible";
+        // Number(logoTranslate.substring(16, logoTranslate.length - 2)) >= 75 ? "hidden" : "visible";
+}
 
 function pushPullHeader( lengthUnscrolled, lengthScrolled ) {
     headerUtilities.style.paddingTop = `${ 60 * lengthScrolled }px`;

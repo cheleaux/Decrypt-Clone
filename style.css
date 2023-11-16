@@ -422,8 +422,8 @@ article {
     margin: 0 auto;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-    height: 882px;
-    margin-bottom: 100px;
+    height: fit-content;
+    padding-bottom: 100px;
 }
 
 .new {

@@ -1,4 +1,4 @@
-import { homepageOnLoadBuffer, initialiseHeader } from "./homePage/homepage"
+import { homepageOnLoadBuffer, initialiseHeader } from "./homePage/homepage.js"
 
 const isOnHomepage = window.location.href == '/'
 

@@ -1,4 +1,4 @@
-import Header from "./header";
+import Header from "./header.js";
 
 
 export function initialiseHeader(){

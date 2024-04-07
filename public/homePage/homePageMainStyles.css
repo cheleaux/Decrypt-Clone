@@ -22,6 +22,7 @@
     --ff-main-bold: 'Akzidenz-Grotesk (R) Schulbuch Medium', 'Akzidenz-Grotesk (R) Schulbuch Regular', sans-serif;
 
     --fw-001: 600;
+    --fw-bold: 800;
 
     --fs-120: .75rem;
     --fs-140: .875rem;
@@ -290,7 +291,6 @@ h4 {
 
     /* ---------- CAROUSEL ---------- */
 
-
     .sticky + .crypto-carousel-container {
         margin-top: 5.0rem;
     }
@@ -311,4 +311,18 @@ h4 {
         width: min( 25rem, 50% )
     }
     
+}
+
+@media (max-width: 46.875rem) {
+
+    article.landing-sec {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.634rem;
+    }
+
+    .to-page-button > * {
+    margin: 0 2rem 0 auto;
+    }
+
 }

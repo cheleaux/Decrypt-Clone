@@ -81,7 +81,7 @@
 }
 
 .feat-list-items > a > h3 {
-    font-size: var(--fs-200);
+    font-size: var(--fs-160);
     font-weight: 500;
     color: var(--clr-text-main);
     display: block;
@@ -113,4 +113,58 @@
     }
 
     
+}
+
+@media (max-width: 66.25rem) {
+
+    .choice-feat-container ul > *:not( .main-feat-info ) {
+        display: none;
+    }
+
+    .choice-feat-container ul {
+        display: block;
+    }
+
+    .feat-item {
+        width: 100%;
+    }
+
+    .main-feat-headline.active-feat {
+        font-weight: var(--fw-001)
+    }
+
+    .feat-news footer {
+        margin-top: 1rem;
+    }
+
+}
+
+@media (max-width: 60.375rem) {
+
+    .feat-news {
+        height: 90%;
+    }
+
+    .feat-news footer {
+        margin-top: auto;
+    }
+
+}
+
+@media (max-width: 46.875rem) {
+
+    .feat-news {
+        padding: 0;
+        margin-bottom: 2.553rem;
+    }
+
+    .main-feat-poster {
+        max-width: 100%;
+        max-height: none;
+    }
+
+    .feat-list > hr:last-of-type {
+        display: none;
+    }
+
 }
